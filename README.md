@@ -56,15 +56,15 @@ scikit-learn
 
 ## 1.3 Criação e Configuração do Ambiente
 
-#### 1.3.1 Abra um terminal na pasta raiz do projeto.
+#### - Abra um terminal na pasta raiz do projeto.
 Crie um ambiente virtual:
 `python -m venv .venv`
 
-#### 1.3.2 Ative o ambiente virtual:
+#### - Ative o ambiente virtual:
 `.venv\Scripts\Activate.ps1`
 
 
-#### 1.3.3 Instale as dependências:
+#### - Instale as dependências:
 `pip install -r requirements.txt`
 
 ## 2. Criação do Dataset
