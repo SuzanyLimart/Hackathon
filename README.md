@@ -115,17 +115,21 @@ Requisitos
 
 No arquivo app/inference.py, estão definidas as seguintes variáveis:
 
-`MODEL_ID = 'amanda2703/pii-distilbert-hackathon'
+```python
+MODEL_ID = 'amanda2703/pii-distilbert-hackathon'
 FILE_PATH = './app/amostras.csv'
 COLUMN_TEXT = 'solicitacao'
-COLUMN_LABEL = 'possui_dados_pessoais'`
+COLUMN_LABEL = 'possui_dados_pessoais'
+```
 
 Descrição:
 
+```python
 `MODEL_ID: identificador do modelo publicado no Hugging Face.
-FILE_PATH: caminho do arquivo CSV a ser analisado.
-COLUMN_TEXT: coluna que contém o texto da solicitação.
+`FILE_PATH: caminho do arquivo CSV a ser analisado.`
+`COLUMN_TEXT: coluna que contém o texto da solicitação.
 COLUMN_LABEL: coluna utilizada para validação dos resultados.`
+```
 
 Regras Extras:
 
