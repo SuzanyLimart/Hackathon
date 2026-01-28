@@ -12,7 +12,7 @@ A solução utiliza um modelo de **Processamento de Linguagem Natural (PLN)** tr
 ---
 
 ## Tecnologias Utilizadas
-- Python 4.14
+- Python 3.14
 - Pandas
 - NumPy
 - Scikit-learn
@@ -38,7 +38,7 @@ Antes de iniciar, certifique-se de ter instalado:
 - Ambiente Windows (testado em Windows 10+)
 - Acesso à internet para download do modelo
 
-> ⚠️ **Observação:** Verifique a **compatibilidade do Python usado**, pois essa versão pode não ser estável em Python recentes que não é suportada pelas bibliotecas utilizadas.
+> ⚠️ **Observação:** Verifique a **compatibilidade do Python usado**, pois versões menos recentes pode não ser estável onde não é suportada pelas bibliotecas utilizadas.
 
 ---
 
