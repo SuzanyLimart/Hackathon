@@ -100,3 +100,77 @@ O modelo treinado foi publicado no Hugging Face Hub:
 
 `🔗 https://huggingface.co/amanda2703/pii-distilbert-hackathon`
 
+## 4. Como Rodar o Projeto (Windows)
+Requisitos
+
+- Python 3.9+
+- Execução
+- Após configurar o ambiente, execute:
+- python app/inference.py
+
+
+#### Na primeira execução, o script realizará o download automático do modelo publicado no Hugging Face, o que pode levar alguns minutos. Nas execuções seguintes, o modelo será carregado a partir do cache local, tornando o processo mais rápido.
+
+-  Configurações do Script
+
+No arquivo app/inference.py, estão definidas as seguintes variáveis:
+
+`MODEL_ID = 'amanda2703/pii-distilbert-hackathon'
+FILE_PATH = './app/amostras.csv'
+COLUMN_TEXT = 'solicitacao'
+COLUMN_LABEL = 'possui_dados_pessoais'`
+
+Descrição:
+
+`MODEL_ID: identificador do modelo publicado no Hugging Face.
+FILE_PATH: caminho do arquivo CSV a ser analisado.
+COLUMN_TEXT: coluna que contém o texto da solicitação.
+COLUMN_LABEL: coluna utilizada para validação dos resultados.`
+
+Regras Extras:
+
+O arquivo de entrada deve estar no formato CSV.
+A coluna definida em COLUMN_TEXT não pode conter valores nulos.
+A coluna COLUMN_LABEL deve conter valores booleanos (True ou False).
+Caso a coluna de validação não exista, o script pode ser adaptado para inferência pura (sem validação).
+
+## 5. Instruções de Execução
+### 5.1 Comando Principal
+python app/inference.py
+
+### 5.2 Formato dos Dados
+
+Entrada:
+- Arquivo CSV contendo:
+- Uma coluna de texto (solicitacao)
+- Opcionalmente, uma coluna de rótulo booleano (possui_dados_pessoais)
+
+Saída:
+- Classificação automática por linha
+- Comparação com rótulos reais (quando disponíveis)
+- Métricas de desempenho exibidas no console
+
+## 6. Clareza e Organização
+### 6.1 Comentários no Código
+
+O código-fonte contém comentários explicativos em:
+
+- Funções de carregamento do modelo
+- Processamento de dados
+
+- Etapas de inferência e validação
+Isso facilita a compreensão e manutenção do projeto.
+
+### 6.2 Estrutura de Diretórios
+.
+├── app/
+│   ├── inference.py
+│   └── amostras.csv
+├── pipelines/
+│   ├── dataset_generation/
+│   └── training/
+├── requirements.txt
+└── README.md
+
+
+A estrutura separa claramente dados, pipelines, scripts e documentação, seguindo boas práticas de projetos em ciência de dados.
