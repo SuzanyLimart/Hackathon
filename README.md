@@ -1,87 +1,88 @@
 # 1º Hackathon em Controle Social: Desafio Participa DF
 ## Categoria: Acesso à Informação
+
 ### Nome do Projeto
+**Classificação Automática de Solicitações com Dados Pessoais (PII)**
 
-Descrição curta do que o projeto faz.
+### Descrição do Projeto
+Este projeto tem como objetivo identificar automaticamente se uma solicitação de acesso à informação contém **dados pessoais sensíveis**, auxiliando órgãos públicos no tratamento adequado das demandas conforme a Lei Geral de Proteção de Dados (LGPD).
 
-## Tecnologias
-- Python
-- 
+A solução utiliza um modelo de **Processamento de Linguagem Natural (PLN)** treinado para classificar textos extraídos de solicitações do Participa DF, indicando se há ou não presença de dados pessoais. O foco é apoiar a transparência pública com responsabilidade e segurança da informação.
+
+---
+
+## Tecnologias Utilizadas
+- Python 3.9+
+- Pandas
+- NumPy
+- Scikit-learn
+- Transformers (Hugging Face)
+- PyTorch
+- Jupyter Notebook
+
+---
 
 ## Autores
-Autor:
-Coautor:
+- **Autora:** Amanda dos Santos Pereira  
+- **Coautora:** Suzany de Almeida Lima  
+
+---
+
+# 1. Instruções de Instalação e Dependências
+
+## 1.1 Pré-requisitos
+Antes de iniciar, certifique-se de ter instalado:
+
+- Python **3.9 ou superior**
+- Git
+- Ambiente Windows (testado em Windows 10+)
+- Acesso à internet para download do modelo
+
+> ⚠️ **Observação:** O projeto **não é compatível com Python 4.x**, pois essa versão ainda não é estável e não é suportada pelas bibliotecas utilizadas.
+
+---
+
+## 1.2 Gerenciamento de Pacotes
+O projeto utiliza um arquivo `requirements.txt`, que contém todas as dependências necessárias para execução, permitindo a instalação automatizada do ambiente.
+
+Exemplo de dependências incluídas:
+```txt
+pandas
+numpy
+torch
+transformers
+scikit-learn
+```
+
+## 1.3 Criação e Configuração do Ambiente
+
+####1.3.1 Abra um terminal na pasta raiz do projeto.
+1.3.2 Crie um ambiente virtual:
+`python -m venv .venv`
+
+####1.3.3 Ative o ambiente virtual:
+`.venv\Scripts\Activate.ps1`
 
 
-# 1. Instruções de Instalação e Dependência
-## 1.1 Lista todos os pré-requisitos, como a versão da linguagem deprogramação (ex: Python 3.9+) e outros softwares necessários.
-Texto.
+####1.3.4. Instale as dependências:
+`pip install -r requirements.txt`
 
-## 1.2 Inclui um arquivo de gerenciamento de pacotes (ex: requirements.txt para Python) que permite a instalação automatizada de todas as bibliotecas.
-Texto.
+## 2. Criação do Dataset
+`O dataset foi construído a partir de solicitações reais disponibilizadas pelo Hackathon Participa DF.`
 
-## 1.3 Apresenta os comandos exatos e sequenciais para criar e configurar o ambiente (ex: criação de ambiente virtual, instalação de dependências).
-
-
-# 2. Instruções de Execução
-## 2.1 Fornece o(s) comando(s) exato(s) para executar o modelo/script, incluindo exemplos de argumentos, se houver.
-Texto.
-
-## 2.2 Descreve claramente o formato de dados esperado na entrada e o formato dos dados que serão gerados na saída.
-Texto.
-
-# 3. Clareza e Organização
-## 3.1 O código-fonte possui comentários em trechos complexos ou em funções chave, explicando a lógica implementada.
-Texto.
-
-## 3.2 A estrutura de arquivos do projeto é lógica e organizada (ex: separando dados, scripts, modelos, etc.).
-Texto.
+Etapas realizadas:
+- Limpeza de textos
+- Normalização (minúsculas, remoção de caracteres especiais)
+- Anonimização manual
+- Rotulagem supervisionada (possui_dados_pessoais = True/False)
+- Validação dos rótulos
+- Esses processos garantem consistência e confiabilidade para o treinamento do modelo.
+- As etapas de criação do dataset estão documentadas no diretório:
+`pipelines/dataset_generation`
 
 
+###2.1 Treinamento e Publicação do Modelo
 
+O treinamento do modelo foi realizado no notebook:
+`pipelines/training/model_training.ipynb`
 
-
-
-
-
-
-# Título principal
-## Subtítulo (H2)
-### Sub-subtítulo (H3)
-#### H4
-
-## Instalação
-## Como usar
-## Tecnologias
-
-Este projeto tem como objetivo analisar dados utilizando Python.
-
-**negrito**
-*itálico*
-***negrito + itálico***
-
-- Item 1
-- Item 2
-- Item 3
-
-1. Passo um
-2. Passo dois
-3. Passo três
-
-Use o comando `pip install`.
-
-[Texto do link](https://github.com)
-
-# Nome do Projeto
-
-Descrição curta do que o projeto faz.
-
-## Tecnologias
-- Python
-- QGIS
-
-## Como usar
-Passos para executar o projeto.
-
-## Autor
-Seu nome
