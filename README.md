@@ -129,9 +129,7 @@ Descrição:
 Essas três variáveis podem ser ajustadas conforme o arquivo submetido, desde que o formato seja CSV e que a coluna definida em `COLUMN_LABEL` contenha valores booleanos.
 
 
-> ⚠️ **Regras Extras:** 
-
-O arquivo de entrada deve estar no formato CSV.
+> ⚠️ **Regras Extras:** O arquivo de entrada deve estar no formato CSV.
 A coluna definida em COLUMN_TEXT não pode conter valores nulos.
 A coluna COLUMN_LABEL deve conter valores booleanos (True ou False).
 Caso a coluna de validação não exista, o script pode ser adaptado para inferência pura (sem validação).
