@@ -56,15 +56,15 @@ scikit-learn
 
 ## 1.3 Criação e Configuração do Ambiente
 
-####1.3.1 Abra um terminal na pasta raiz do projeto.
+#### 1.3.1 Abra um terminal na pasta raiz do projeto.
 1.3.2 Crie um ambiente virtual:
 `python -m venv .venv`
 
-####1.3.3 Ative o ambiente virtual:
+#### 1.3.3 Ative o ambiente virtual:
 `.venv\Scripts\Activate.ps1`
 
 
-####1.3.4. Instale as dependências:
+#### 1.3.4. Instale as dependências:
 `pip install -r requirements.txt`
 
 ## 2. Criação do Dataset
@@ -81,7 +81,7 @@ Etapas realizadas:
 `pipelines/dataset_generation`
 
 
-###2.1 Treinamento e Publicação do Modelo
+### 2.1 Treinamento e Publicação do Modelo
 
 O treinamento do modelo foi realizado no notebook:
 `pipelines/training/model_training.ipynb`
