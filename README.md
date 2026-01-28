@@ -162,6 +162,7 @@ O código-fonte contém comentários explicativos em:
 Isso facilita a compreensão e manutenção do projeto.
 
 ### 6.2 Estrutura de Diretórios
+```
 .
 ├── app/ 
 │   ├── inference.py 
@@ -171,6 +172,6 @@ Isso facilita a compreensão e manutenção do projeto.
 │   └── training/ 
 ├── requirements.txt 
 └── README.md 
-
+```
 
 A estrutura separa claramente dados, pipelines, scripts e documentação, seguindo boas práticas de projetos em ciência de dados.
