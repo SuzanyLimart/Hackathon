@@ -81,7 +81,7 @@ Etapas realizadas:
 `pipelines/dataset_generation`
 
 
-## 3 Treinamento e Publicação do Modelo
+## 3. Treinamento e Publicação do Modelo
 
 ### O treinamento do modelo:
 
