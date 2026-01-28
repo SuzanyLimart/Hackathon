@@ -83,8 +83,11 @@ Etapas realizadas:
 
 ## 3 Treinamento e Publicação do Modelo
 
-### O treinamento do modelo foi realizado no notebook:
-`pipelines/training/model_training.ipynb`
+### O treinamento do modelo:
+
+O modelo treinado no notebook `pipelines/training/model_training.ipynb` foi publicado no Hugging Face
+🔗 ([https://huggingface.co/amanda2703/pii-distilbert-hackathon](https://huggingface.co/amanda2703/pii-distilbert-hackathon)).
+
 
 #### Etapas do treinamento:
 
@@ -96,21 +99,17 @@ Etapas realizadas:
 
 - Salvamento do modelo final
 
-O modelo treinado foi publicado no Hugging Face Hub:
-
-`🔗 https://huggingface.co/amanda2703/pii-distilbert-hackathon`
 
 ## 4. Como Rodar o Projeto (Windows)
 Requisitos
-
-- Python 3.9+
+- Python
 - Execução
 - Após configurar o ambiente, execute:
 - python app/inference.py
 
+> ⚠️ **Observação:** Na primeira execução do script, é esperado um tempo maior de processamento, pois o modelo será baixado e armazenado em cache. Após essa etapa inicial, as execuções subsequentes tendem a ser significativamente mais rápidas.
 
-#### Na primeira execução, o script realizará o download automático do modelo publicado no Hugging Face, o que pode levar alguns minutos. Nas execuções seguintes, o modelo será carregado a partir do cache local, tornando o processo mais rápido.
-
+---
 -  Configurações do Script
 
 No arquivo app/inference.py, estão definidas as seguintes variáveis:
@@ -124,12 +123,11 @@ COLUMN_LABEL = 'possui_dados_pessoais'
 
 Descrição:
 
-```python
-`MODEL_ID: identificador do modelo publicado no Hugging Face.
-`FILE_PATH: caminho do arquivo CSV a ser analisado.`
-`COLUMN_TEXT: coluna que contém o texto da solicitação.
-COLUMN_LABEL: coluna utilizada para validação dos resultados.`
-```
+* **FILE_PATH**: define o caminho do arquivo CSV que será analisado. O arquivo utilizado é o disponibilizado pelo Hackathon, no qual as classificações foram criadas manualmente.
+* **COLUMN_TEXT**: indica a coluna que contém o texto a ser classificado.
+* **COLUMN_LABEL**: indica a coluna utilizada para validação das classificações.
+Essas três variáveis podem ser ajustadas conforme o arquivo submetido, desde que o formato seja CSV e que a coluna definida em `COLUMN_LABEL` contenha valores booleanos.
+
 
 Regras Extras:
 
