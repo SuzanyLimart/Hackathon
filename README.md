@@ -38,7 +38,7 @@ Antes de iniciar, certifique-se de ter instalado:
 - Ambiente Windows (testado em Windows 10+)
 - Acesso à internet para download do modelo
 
-> ⚠️ **Observação:** Verifique a **compatibilidade do Python usado**, pois versões menos recentes pode não ser estável onde não é suportada pelas bibliotecas utilizadas.
+> ⚠️ **Observação:** Verifique a **compatibilidade do Python usado**, pois versões menos recentes pode não ser estaveis, onde não é suportada pelas bibliotecas utilizadas.
 
 ---
 
@@ -47,11 +47,16 @@ O projeto utiliza um arquivo `requirements.txt`, que contém todas as dependênc
 
 Exemplo de dependências incluídas:
 ```txt
+chardet
+datasets
+datasketch
+openai
 pandas
-numpy
-torch
-transformers
 scikit-learn
+torch
+tqdm
+transformers>=4.40
+transformers[torch] 
 ```
 
 ## 1.3 Criação e Configuração do Ambiente
