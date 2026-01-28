@@ -163,14 +163,14 @@ Isso facilita a compreensão e manutenção do projeto.
 
 ### 6.2 Estrutura de Diretórios
 .
-├── app/
-│   ├── inference.py
-│   └── amostras.csv
-├── pipelines/
-│   ├── dataset_generation/
-│   └── training/
-├── requirements.txt
-└── README.md
+├── app/ 
+│   ├── inference.py 
+│   └── amostras.csv 
+├── pipelines/ 
+│   ├── dataset_generation/ 
+│   └── training/ 
+├── requirements.txt 
+└── README.md 
 
 
 A estrutura separa claramente dados, pipelines, scripts e documentação, seguindo boas práticas de projetos em ciência de dados.
