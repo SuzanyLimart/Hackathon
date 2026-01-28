@@ -57,23 +57,23 @@ scikit-learn
 ## 1.3 Criação e Configuração do Ambiente
 
 #### 1.3.1 Abra um terminal na pasta raiz do projeto.
-1.3.2 Crie um ambiente virtual:
+Crie um ambiente virtual:
 `python -m venv .venv`
 
-#### 1.3.3 Ative o ambiente virtual:
+#### 1.3.2 Ative o ambiente virtual:
 `.venv\Scripts\Activate.ps1`
 
 
-#### 1.3.4. Instale as dependências:
+#### 1.3.3 Instale as dependências:
 `pip install -r requirements.txt`
 
 ## 2. Criação do Dataset
-`O dataset foi construído a partir de solicitações reais disponibilizadas pelo Hackathon Participa DF.`
+O dataset foi construído a partir de solicitações reais disponibilizadas pelo `portaldatransparencia.gov.br` em Busca de Pedidos e Respostas dos anos de 2025 e 2024.
 
 Etapas realizadas:
 - Limpeza de textos
 - Normalização (minúsculas, remoção de caracteres especiais)
-- Anonimização manual
+- Anonimização
 - Rotulagem supervisionada (possui_dados_pessoais = True/False)
 - Validação dos rótulos
 - Esses processos garantem consistência e confiabilidade para o treinamento do modelo.
@@ -81,8 +81,22 @@ Etapas realizadas:
 `pipelines/dataset_generation`
 
 
-### 2.1 Treinamento e Publicação do Modelo
+## 3 Treinamento e Publicação do Modelo
 
-O treinamento do modelo foi realizado no notebook:
+### O treinamento do modelo foi realizado no notebook:
 `pipelines/training/model_training.ipynb`
+
+#### Etapas do treinamento:
+
+- Tokenização dos textos
+
+- Fine-tuning do modelo DistilBERT
+
+- Avaliação com métricas de classificação
+
+- Salvamento do modelo final
+
+O modelo treinado foi publicado no Hugging Face Hub:
+
+`🔗 https://huggingface.co/amanda2703/pii-distilbert-hackathon`
 
