@@ -97,11 +97,8 @@ O modelo treinado no notebook `pipelines/training/model_training.ipynb` foi publ
 #### Etapas do treinamento:
 
 - Tokenização dos textos
-
 - Fine-tuning do modelo DistilBERT
-
 - Avaliação com métricas de classificação
-
 - Salvamento do modelo final
 
 
